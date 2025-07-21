@@ -17,12 +17,16 @@ export default async function Home() {
         <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
           <div className="max-w-md space-y-4">
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-              Welcome to Ednut
+              Welcome to kennys shop
             </h2>
             <p className="text-neutral-600">
               Discover the latest products at the best prices
             </p>
-            <Button asChild variant={`default`}>
+            <Button
+              asChild
+              variant={`default`}
+              className="bg-blue-600 text-white"
+            >
               <Link href={`/products`}>Browse our products</Link>
             </Button>
           </div>

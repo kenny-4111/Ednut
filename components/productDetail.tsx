@@ -49,13 +49,15 @@ export const ProductDetail = ({ product }: Props) => {
             -
           </Button>
           <span className="text-lg font-semibold">{quantity}</span>
-          <Button onClick={onAddItem}>+</Button>
+          <Button onClick={onAddItem} className="bg-black text-white">
+            +
+          </Button>
         </div>
         <Button
           onClick={() => {
             window.location.href = "/products";
           }}
-          className="mt-4 bg-blue-500"
+          className="mt-4 bg-blue-500 text-white"
         >
           continue shopping
         </Button>

@@ -18,9 +18,9 @@ export default function SuccessPage() {
         onClick={() => {
           window.location.href = "/products";
         }}
-        className="bg-blue-500"
+        className="bg-blue-500 text-white"
       >
-        continue shopping
+        Back to shopping
       </Button>
     </div>
   );
