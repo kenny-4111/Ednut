@@ -70,7 +70,11 @@ export const Navbar = () => {
             <nav className="fixed top-16 right-4 w-48 p-4 md:hidden bg-white shadow-md rounded-md z-50">
               <ul className="flex flex-col p-4 space-y-2">
                 <li>
-                  <Link href={`/`} className="block hover:text-blue-600">
+                  <Link
+                    href={`/`}
+                    className="block hover:text-blue-600"
+                    onClick={() => setMobileOpen(false)}
+                  >
                     Home
                   </Link>
                 </li>
@@ -78,6 +82,7 @@ export const Navbar = () => {
                   <Link
                     href={`/products`}
                     className="block hover:text-blue-600"
+                    onClick={() => setMobileOpen(false)}
                   >
                     Products
                   </Link>
@@ -86,6 +91,7 @@ export const Navbar = () => {
                   <Link
                     href={`/checkout`}
                     className="block hover:text-blue-600"
+                    onClick={() => setMobileOpen(false)}
                   >
                     Checkout
                   </Link>
