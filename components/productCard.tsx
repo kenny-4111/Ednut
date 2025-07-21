@@ -40,7 +40,7 @@ export const ProductCard = ({ product }: Props) => {
                 ${(price.unit_amount / 100).toFixed(2)}
               </p>
             )}
-            <Button className="pb-4">View Details</Button>
+            <Button className="pb-4 bg-black text-white">View Details</Button>
           </CardContent>
         </CardHeader>
       </Card>
