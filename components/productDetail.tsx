@@ -12,13 +12,14 @@ export const ProductDetail = ({ product }: Props) => {
   const price = product.default_price as Stripe.Price;
   const cartItem = items.find((item) => item.id === product.id);
   const quantity = cartItem ? cartItem.quantity : 0;
+  console.log("ProductDetail", product);
 
   const onAddItem = () => {
     addItem({
       id: product.id,
       name: product.name,
       price: price.unit_amount as number,
-      imageUrl: product.images ? product.images[0] : null,
+      imageUrl: product.images?.[0] ?? null,
       quantity: 1,
     });
   };
@@ -59,7 +60,16 @@ export const ProductDetail = ({ product }: Props) => {
           }}
           className="mt-4 bg-blue-500 text-white"
         >
-          continue shopping
+          ⇐ Back to products
+        </Button>
+        <br />
+        <Button
+          onClick={() => {
+            window.location.href = "/checkout";
+          }}
+          className="mt-4 bg-black text-white pl-10 pr-10"
+        >
+          Checkout ⇒
         </Button>
       </div>
     </div>

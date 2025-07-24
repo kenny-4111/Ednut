@@ -20,7 +20,7 @@ export default function SuccessPage() {
         }}
         className="bg-blue-500 text-white"
       >
-        Back to shopping
+        Back to Products
       </Button>
     </div>
   );

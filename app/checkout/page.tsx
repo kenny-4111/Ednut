@@ -4,9 +4,11 @@ import { Card, CardContent, CardTitle, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { checkoutAction } from "./checkoutAction";
+import Image from "next/image";
 
 export default function CheckoutPage() {
   const { items, removeItem, addItem, clearCart } = useCartStore();
+  console.log("Cart items:", items);
 
   const total = items.reduce(
     (acc, item) => acc + item.price * item.quantity,
@@ -37,9 +39,15 @@ export default function CheckoutPage() {
             {items.map((item, key) => (
               <li
                 key={key}
-                className="flex justify-between items-center gap-4 border-b pb-4"
+                className="flex flex-col sm:flex-row justify-between items-center gap-4 border-b pb-4"
               >
                 <div className="flex items-center gap-4">
+                  <Image
+                    src={item?.imageUrl}
+                    alt={item.name}
+                    width={100}
+                    height={100}
+                  />
                   <div>
                     <h2 className="text-lg font-medium">{item.name}</h2>
                     <p className="text-sm text-gray-500">
@@ -59,7 +67,13 @@ export default function CheckoutPage() {
                   <span className="text-lg font-semibold">{item.quantity}</span>
                   <Button
                     size="icon"
-                    onClick={() => addItem({ ...item, quantity: 1 })}
+                    onClick={() =>
+                      addItem({
+                        ...item,
+                        quantity: 1,
+                      })
+                    }
+                    className="bg-black text-white"
                   >
                     +
                   </Button>
