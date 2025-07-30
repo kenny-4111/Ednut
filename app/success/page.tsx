@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 
 import { useCartStore } from "@/store/cartStore";
 import { useEffect } from "react";
@@ -14,6 +15,14 @@ export default function SuccessPage() {
       <p className="mb-4">
         Thank you for your purchase. Your order is being processed.
       </p>
+      <Button
+        onClick={() => {
+          window.location.href = "/";
+        }}
+        className="bg-blue-500 text-white"
+      >
+        Back to Home
+      </Button>
     </div>
   );
 }
