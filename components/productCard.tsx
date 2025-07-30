@@ -12,7 +12,7 @@ export const ProductCard = ({ product }: Props) => {
   const price = product.default_price as Stripe.Price;
   return (
     <Link href={`/products/${product.id}`}>
-      <Card className="group hover:shadow-2xl transition duration-300 py-0 h-full flex flex-col border-gray-300 gap-0">
+      <Card className="group hover:shadow-1xl transition duration-300 py-0 h-full flex flex-col border-gray-300 gap-0">
         {product.images && product.images[0] && (
           <div className="relative h-60 w-full">
             <Image
@@ -21,7 +21,6 @@ export const ProductCard = ({ product }: Props) => {
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               style={{ objectFit: "contain" }}
-              className="group-hover:opacity-90 transition-opacity duration-300 rounded-t-lg"
             />
           </div>
         )}

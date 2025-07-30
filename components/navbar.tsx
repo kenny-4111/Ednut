@@ -25,7 +25,7 @@ export const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-white shadow">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <Link href="/" className="hover:text-blue-600">
-          kenny shop
+          Kendall Store
         </Link>
         <div className="hidden md:flex space-x-6">
           <Link href="/" className="hover:text-blue-600">
