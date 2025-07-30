@@ -58,7 +58,7 @@ export const ProductDetail = ({ product }: Props) => {
           onClick={() => {
             window.location.href = "/products";
           }}
-          className="mt-4 bg-blue-500 text-white"
+          className="mt-4 bg-black text-white"
         >
           ⇐ Back to products
         </Button>
@@ -67,7 +67,7 @@ export const ProductDetail = ({ product }: Props) => {
           onClick={() => {
             window.location.href = "/checkout";
           }}
-          className="mt-4 bg-black text-white pl-10 pr-10"
+          className="mt-4 bg-blue-500 text-white pl-10 pr-10"
         >
           Checkout ⇒
         </Button>
